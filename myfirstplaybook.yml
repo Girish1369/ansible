@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: yes #become maha user as the supreme user
+  tasks:
+      - name: install the git
+        apt:
+            name: git
+            state: present
+
+      - name: install the tree
+        apt:
+            name: tree
+            state: present
+
+      - name: install the wget
+        apt:
+            name: wget
+            state: present
+
+      
