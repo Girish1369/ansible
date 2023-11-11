@@ -15,6 +15,6 @@
       - name: install the wget
         apt:
             name: wget
-            state: present
+            state: ubsent
 
       
