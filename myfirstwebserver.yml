@@ -6,9 +6,9 @@
         apt: 
          name: apche2
          state: present
-       when: ansible_os_family=="Debian"
+        when: ansible_os_family=="Debian"
 
-     -  name: install apache2 by service model
+      - name: install apache2 by service model
         service:
          name: apache2
          state: started
