@@ -2,14 +2,26 @@
 - hosts: all
   become: yes
   tasks:
-      - name: install apache2 by apt model
+      - name: install apache2 by apt model on ubunto
         apt: 
          name: apache2
          state: present
         when: ansible_os_family=="Debian"
 
-      - name: install apache2 by service model
+      - name: controll service of  apache2 by service model
         service:
          name: apache2
          state: started
         when: ansible_os_family=="Debian"
+
+      - name: install httpd by dnf model on RedHat
+        dnf: 
+          name: httpd
+          state: present
+        when: ansible_os_family=="RedHat"
+
+      - name: service control of httpd by service model on Redhat
+        service: 
+          name: httpd
+          state: started
+        when: ansible_os_family=="RedHat"
