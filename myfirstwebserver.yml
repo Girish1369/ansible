@@ -1,5 +1,5 @@
 ---
-- hosts: myfirstwebserver
+- hosts: myfirstserver
   become: yes
   tasks:
       - name: install apache2 by apt model on ubunto
