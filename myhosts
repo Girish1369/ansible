@@ -1,2 +1,11 @@
+[myfirstwebserver]
 172.31.19.28
 172.31.17.19
+
+[redhatserver]
+172.31.17.19
+
+[ubuntuserver]
+172.31.19.28
+
+

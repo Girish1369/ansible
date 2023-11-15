@@ -1,27 +1,27 @@
 ---
-- hosts: all
+- hosts: myfirstwebserver
   become: yes
   tasks:
       - name: install apache2 by apt model on ubunto
         apt: 
-         name: apache2
+         name: "{{mywebpackonubuntu}}"
          state: present
         when: ansible_os_family=="Debian"
 
       - name: controll service of  apache2 by service model
         service:
-         name: apache2
+         name: "{{mywebpackonubuntu}}"
          state: started
         when: ansible_os_family=="Debian"
 
       - name: install httpd by dnf model on RedHat
         dnf: 
-          name: httpd
+          name: "{{mywebpackonuredhat}}"
           state: present
         when: ansible_os_family=="RedHat"
 
       - name: service control of httpd by service model on Redhat
         service: 
-          name: httpd
+          name: "{{mywebpackonuredhat}}"
           state: started
         when: ansible_os_family=="RedHat"
