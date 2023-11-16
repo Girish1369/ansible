@@ -1,0 +1,14 @@
+---
+- hosts: myfirstserver
+  become: yes
+  tasks:
+  - name: download java on ubuntu
+    apt: 
+      name: "{{myjavapackonubuntu}}"
+      state: present
+    when: ansible_os_family=="Debian"
+  - name: download java on redhat
+    dnf: 
+      name: "{{myjavapackonredhat}}"
+      state: present
+    when: ansible_os_family=="RedHat"
