@@ -5,6 +5,6 @@
   - include_tasks: myfile.yml
   - name: copy the index file on ansible node side
     copy:
-      src: myindexfile
-      dest:  /var/www/html/index.html
-      
+       src: myindexfile
+       dest:  /var/www/html/index.html
+
