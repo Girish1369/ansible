@@ -1,2 +1,6 @@
 ---
 # vars file for mywebrole
+- name: install apache 2
+  apt:
+   name: apache2
+   state: present
